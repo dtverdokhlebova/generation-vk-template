@@ -1,0 +1,42 @@
+mixin topics(mods)
+  -
+    const baseName = 'topics'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  -
+    const items =[
+      { title: '«Как продвигать автомобильный бизнес в VK Рекламе?»',
+        descr: 'VK Реклама'
+      },
+      { title: '«Интеграция с ВК рекламой для эффективной работы и новинки для автодилеров»',
+        descr: 'CallTouch'
+      },
+      { title: '«Кейсы по использованию инструментов VK Рекламы для автодилеров»',
+        descr: 'Генерация'
+      },
+      { title: '«Ответы на вопросы тектс текст текст«',
+        descr: 'Генерация'
+      },
+    ]
+
+  .topics(class=allMods)&attributes(attributes)
+    .topics__head
+      .topics__time
+        .topics__time-text 00:00
+      .topics__head-descr Общее время вебинара
+    .topics__main
+      each item in items
+        .topics__item
+          .topics__decor
+            .topics__fire
+          .topics__text
+            +ui-h3(item.title, 'topics, --medium, --font-secondary, --l-xs, --mob-bold')
+            +ui-h5(item.descr, 'topics, --medium')
+    block

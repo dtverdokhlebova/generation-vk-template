@@ -1,0 +1,27 @@
+mixin form-thank(mods)
+  -
+    const baseName = 'form-thank'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .form-thank(class=allMods)&attributes(attributes)
+    .form-thank__img
+      img(src='../../images/form-thank-bg.png', alt='')
+    a(href='#').form-thank__close
+      +svg
+        include ../../images/icon_cross.svg
+    .inner
+      .form-thank__wrapper
+        .form-thank__text
+          .form-thank__title Данные успешно отправлены! <br>Мы скоро свяжемся с&nbsp;вами.
+          +ui-button('', '--medium, --fz-xs, --al-left')(onclick=`window.openPopup('#popup-share')`)
+            +svg
+              include ../../images/icon_share.svg
+            | Поделиться вебинаром с&nbsp;коллегами
+    block

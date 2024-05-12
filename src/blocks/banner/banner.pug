@@ -1,0 +1,57 @@
+mixin banner(mods)
+  -
+    const baseName = 'banner'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  -
+    const info =[
+      { val: '11.04', descr: 'Старт вебинара' },
+      { val: '18:00', descr: 'По МСК' },
+    ]
+
+  .banner(class=allMods)&attributes(attributes)
+    .banner__bg
+      img(src='../../images/banner-bg.svg', alt='')
+    .inner.banner__inner
+      .banner__main
+        .banner__megaphone.banner__megaphone--1
+          img(src='../../images/banner-megaphone-1.png', alt='')
+        .banner__megaphone.banner__megaphone--2
+          img(src='../../images/banner-megaphone-2.png', alt='')
+        .banner__main-content
+          .banner__info
+            each item in info
+              .banner__info-item
+                .banner__info-val !{item.val}
+                .banner__info-descr !{item.descr}
+          .banner__text
+            +ui-h1('Обсудим как продвигать  ', '--bold').banner__title
+              .banner__title-accent автомобильный бизнес
+              | в VК Рекламе
+            +ui-h5('<b>БЕСПЛАТНЫЙ</b> онлайн-вебинар', '--mob-l')
+      .banner__foot
+        +ui-button('Записаться на вебинар', '--medium, --fz-s, --mob-bold')(href='#section-form-registry')
+        .banner__timeleft
+          .banner__timeleft-icon
+          .banner__timeleft-text
+            | До начала вебинара осталось:
+            .banner__timer(data-timer='' data-start='May 1, 2024 00:00:00' data-end="May 30, 2024 17:00:00")
+              span.banner__timer-item(data-timer-days) 00 дней
+              |  :
+              =' '
+              span.banner__timer-item(data-timer-hours) 00 часов
+              |  :
+              =' '
+              span.banner__timer-item(data-timer-minutes) 00 минут
+              |  :
+              =' '
+              span.banner__timer-item(data-timer-seconds) 00 секунды
+            | Успейте записаться!
+

@@ -1,0 +1,93 @@
+.ui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px 48px;
+  font: 700 27px/1.21 $font;
+  text-align: center;
+  color: $white;
+  background: $blue;
+  border: 1px solid $blue;
+  border-radius: 60px;
+  transition: $transitionDuration;
+  cursor: pointer;
+  @include media-laptop {
+    padding: 24px;
+    font-size: 20px;
+  }
+  @include media-tablet {
+    gap: 6px;
+  }
+  @include media-hover {
+    color: $blue;
+    background: transparent;
+  }
+  .svg {
+    flex-shrink: 0;
+    width: 37px;
+    height: 37px;
+    @include media-tablet {
+      width: 26px;
+      height: 26px;
+    }
+  }
+  &--w-100 {
+    width: 100%;
+  }
+  &--p-xs {
+    padding: 17px 31px;
+  }
+  &--medium {
+    font-weight: 500;
+  }
+  &--fz-s {
+    font-size: 25px;
+    @include media-tablet {
+      font-size: 20px;
+    }
+  }
+  &--fz-xs {
+    font-size: 20px;
+    @include media-tablet {
+      font-size: 16px;
+    }
+  }
+  &--fz-xxs {
+    font-size: 14px;
+  }
+  &--al-left {
+    text-align: left;
+  }
+  &--outline {
+    color: $black;
+    background: transparent;
+    .svg {
+      color: $blue;
+    }
+    @include media-hover {
+      color: $white;
+      background: $blue;
+      .svg {
+        color: $white;
+      }
+    }
+  }
+  &--icon-s {
+    gap: 5px;
+    .svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &--mob-w-100 {
+    @include media-tablet {
+      width: 100%;
+    }
+  }
+  &--mob-bold {
+    @include media-tablet {
+      font-weight: 700;
+    }
+  }
+}

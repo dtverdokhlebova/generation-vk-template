@@ -1,0 +1,27 @@
+mixin organizers(mods)
+  -
+    const baseName = 'organizers'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  -
+    const items =[
+      { logo: 'organizers_logo_generation.svg', text: 'Digital-агентство полного цикла с максимальным погружением в проект' },
+      { logo: 'organizers_logo_vk.svg', text: 'Рекламная платформа' },
+      { logo: 'organizers_logo_calltouch.png', text: 'Платформа <br>омниканального маркетинга' },
+    ]
+
+  .organizers(class=allMods)&attributes(attributes)
+    each item in items
+      a.organizers__item(href='#')
+        .organizers__wrapper
+          .organizers__logo
+            img(src=`../../images/${item.logo}`, alt='')
+          +ui-p1(item.text, '--medium')
+    block

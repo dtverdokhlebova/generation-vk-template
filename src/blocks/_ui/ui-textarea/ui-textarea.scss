@@ -1,0 +1,30 @@
+.ui-textarea {
+  --ui-input-color: #d9d9d9;
+  --ui-input-border: #c4c4c4;
+  textarea {
+    width: 100%;
+    padding: 21px 20px;
+    font: 500 25px/1.3 $font;
+    color: var(--ui-input-color);
+    background: transparent;
+    border: 1px solid var(--ui-input-border);
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+    transition: $transitionDuration;
+    @include media-laptop {
+      padding: 10px;
+      font-size: 16px;
+    }
+    &::placeholder {
+      color: inherit;
+    }
+    &:focus {
+      --ui-input-color: #5c5c5c;
+      --ui-input-border: #5c5c5c;
+    }
+  }
+  &.error {
+    --ui-input-border: #{$error};
+  }
+}

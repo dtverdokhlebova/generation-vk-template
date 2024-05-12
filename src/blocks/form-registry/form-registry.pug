@@ -1,0 +1,45 @@
+mixin form-registry(mods)
+  -
+    const baseName = 'form-registry'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .form-registry(class=allMods)&attributes(attributes)
+    .form-registry__bg
+      img(src='../../images/form-registry-bg.png', alt='')
+    .form-registry__coin.form-registry__coin--1
+      img(src='../../images/form-registry-coin-1.png', alt='')
+    .form-registry__coin.form-registry__coin--2
+      img(src='../../images/form-registry-coin-2.png', alt='')
+    .form-registry__coin.form-registry__coin--3
+      img(src='../../images/form-registry-coin-3.png', alt='')
+    .inner
+      .form-registry__wrapper
+        +section-head('--mb-s').text-center
+          +ui-h1('Успейте зарегистрироваться <br>на ', '--bold')
+            span.form-registry__text-anim вебинар
+        .form-registry__main
+          .form-registry__row
+            +ui-input('form-registry-name', '', 'error', 'Введите верные данные')(placeholder='Имя' name='name')
+          .form-registry__row
+            +ui-input('form-registry-phone', '', '', 'Введите верные данные')(placeholder='Телефон' name='phone')
+          .form-registry__row
+            +ui-input('form-registry-email', '', '', 'Введите верные данные')(placeholder='Email' name='email' type='email')
+          .form-registry__row
+            +ui-input('form-registry-company', '', '', 'Введите верные данные')(placeholder='Название компании' name='company')
+          .form-registry__row
+            +ui-input('form-registry-position', '', '', 'Введите верные данные')(placeholder='Должность' name='position')
+          .form-registry__row
+            +ui-textarea('form-registry-qestion', '', 'error')(placeholder='Вопрос спикерам' name='qestion' rows='3')
+          .form-registry__row.form-registry__row--mt-l
+            +ui-button('Записаться на вебинар', '--w-100')
+          .form-registry__row.text-center
+            +ui-p3('Нажимая кнопку “Отправить” вы соглашаетесь с ', '--mob-s').text-grey-56
+              a.text-blue(href='#') политикой конфиденциальности
+    block

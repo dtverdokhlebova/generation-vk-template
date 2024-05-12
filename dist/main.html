@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Main</title>
+  <meta content="&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <link href="" rel="icon" type="image/x-icon">
+  <link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script type="module" crossorigin src="scripts/scripts.js"></script>
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body ontouchstart>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="inner header__inner">
+          <div class="header__logo">
+            <div class="svg"><svg width="181" height="28" viewBox="0 0 181 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="header__logo-accent" d="M0.875 17.4089C0.875 15.9233 1.49479 14.7976 2.73438 14.032C3.97396 13.2572 5.67383 12.8699 7.83398 12.8699L11.7988 12.8835V12.0085C11.7988 11.3523 11.5755 10.8556 11.1289 10.5183C10.6914 10.172 9.94401 9.99878 8.88672 9.99878C7.875 9.99878 7.1276 10.1492 6.64453 10.45C6.17057 10.7416 5.93359 11.1381 5.93359 11.6394V11.8718L1.83203 11.8582V11.6257C1.83203 10.2768 2.48828 9.21037 3.80078 8.42651C5.11328 7.64266 6.89062 7.25073 9.13281 7.25073C11.3841 7.25073 13.1068 7.64722 14.3008 8.44019C15.4948 9.23315 16.0918 10.4591 16.0918 12.1179V18.3523C16.0918 18.9174 16.1465 19.4552 16.2559 19.9656C16.3652 20.476 16.5156 20.9135 16.707 21.2781V21.4832H12.4824C12.3457 21.2644 12.2272 20.991 12.127 20.6628C12.0358 20.3347 11.972 19.9929 11.9355 19.6375C11.5983 20.1934 10.9466 20.6811 9.98047 21.1003C9.02344 21.5105 7.82487 21.7156 6.38477 21.7156C4.70768 21.7156 3.36784 21.351 2.36523 20.6218C1.37174 19.8927 0.875 18.8217 0.875 17.4089ZM5.16797 17.0671C5.16797 17.7052 5.39128 18.1928 5.83789 18.53C6.28451 18.8673 7.00456 19.0359 7.99805 19.0359C9.03711 19.0359 9.9349 18.7807 10.6914 18.2703C11.4479 17.7507 11.8262 17.1218 11.8262 16.3835V15.2214H8.73633C7.5332 15.2214 6.63542 15.3718 6.04297 15.6726C5.45964 15.9734 5.16797 16.4382 5.16797 17.0671ZM19.3594 15.823V7.66089H23.666V15.6589C23.666 16.7162 23.9121 17.4682 24.4043 17.9148C24.8965 18.3523 25.5801 18.571 26.4551 18.571C27.2572 18.571 27.9635 18.366 28.5742 17.9558C29.1849 17.5457 29.6543 17.0444 29.9824 16.4519V7.66089H34.2891V21.4832H30.1465L30.0645 19.5144H30.0234C29.5221 20.2071 28.8249 20.7631 27.9316 21.1824C27.0475 21.6016 26.013 21.8113 24.8281 21.8113C23.1966 21.8113 21.875 21.3419 20.8633 20.4031C19.8607 19.4643 19.3594 17.9376 19.3594 15.823ZM36.0117 10.7781V7.66089H46.4434V10.7781H36.0117ZM38.6641 17.2175V8.90503L38.7324 8.59058V3.96948H42.9297V16.7527C42.9297 17.491 43.0846 18.0014 43.3945 18.2839C43.7044 18.5574 44.1556 18.6941 44.748 18.6941C45.0671 18.6941 45.3542 18.6667 45.6094 18.6121C45.8646 18.5574 46.1107 18.4936 46.3477 18.4207L46.4023 21.4148C46.138 21.5242 45.7643 21.6244 45.2812 21.7156C44.7982 21.8067 44.2103 21.8523 43.5176 21.8523C42.0501 21.8523 40.8743 21.4786 39.9902 20.7312C39.1061 19.9747 38.6641 18.8035 38.6641 17.2175ZM47.6602 14.7429V14.3464C47.6602 12.1863 48.4303 10.4636 49.9707 9.17847C51.5111 7.8842 53.5391 7.23706 56.0547 7.23706C58.5612 7.23706 60.5846 7.8842 62.125 9.17847C63.6654 10.4636 64.4355 12.1863 64.4355 14.3464V14.7429C64.4355 16.9213 63.6654 18.6576 62.125 19.9519C60.5846 21.2371 58.5612 21.8796 56.0547 21.8796C53.5391 21.8796 51.5111 21.2371 49.9707 19.9519C48.4303 18.6576 47.6602 16.9213 47.6602 14.7429ZM52.0352 14.1824V14.9343C52.0352 16.1375 52.3815 17.0717 53.0742 17.7371C53.7669 18.3933 54.7559 18.7214 56.041 18.7214C57.3353 18.7214 58.3288 18.3933 59.0215 17.7371C59.7142 17.0717 60.0605 16.1375 60.0605 14.9343V14.1824C60.0605 12.9884 59.7096 12.0632 59.0078 11.407C58.3151 10.7416 57.3262 10.4089 56.041 10.4089C54.765 10.4089 53.776 10.7416 53.0742 11.407C52.3815 12.0632 52.0352 12.9884 52.0352 14.1824Z" fill="#0077FF" />
+                <path d="M67.3887 21.4832V7.68823H74.8672C76.3984 7.68823 77.5833 7.98901 78.4219 8.59058C79.2695 9.19214 79.6934 10.1082 79.6934 11.3386C79.6934 12.1134 79.4701 12.7605 79.0234 13.28C78.5859 13.7996 77.998 14.155 77.2598 14.3464V14.3875C78.1439 14.5333 78.8548 14.8796 79.3926 15.4265C79.9303 15.9734 80.1992 16.6843 80.1992 17.5593C80.1992 18.7989 79.7526 19.7651 78.8594 20.4578C77.9753 21.1414 76.7676 21.4832 75.2363 21.4832H67.3887ZM69.6309 13.5671H74.8672C75.7786 13.5671 76.4303 13.3803 76.8223 13.0066C77.2233 12.6238 77.4238 12.0997 77.4238 11.4343C77.4238 10.8054 77.2233 10.3223 76.8223 9.98511C76.4212 9.64787 75.7695 9.47925 74.8672 9.47925H69.6309V13.5671ZM69.6309 19.6921H75.2363C76.166 19.6921 76.8496 19.5007 77.2871 19.1179C77.7246 18.726 77.9434 18.1973 77.9434 17.532C77.9434 16.8757 77.7292 16.3516 77.3008 15.9597C76.8724 15.5587 76.1842 15.3582 75.2363 15.3582H69.6309V19.6921ZM82.7422 14.7703V14.3738C82.7422 12.2865 83.3984 10.5867 84.7109 9.27417C86.0234 7.96167 87.7643 7.30542 89.9336 7.30542C92.0938 7.30542 93.7526 7.92065 94.9102 9.15112C96.0768 10.3725 96.6602 12.0359 96.6602 14.1414V15.0574H84.0273V13.239H94.4043V13.1433C94.4043 12.0313 94.0579 11.0925 93.3652 10.3269C92.6816 9.56128 91.5469 9.17847 89.9609 9.17847C88.3112 9.17847 87.0671 9.6661 86.2285 10.6414C85.3991 11.6075 84.9844 12.8516 84.9844 14.3738V14.7839C84.9844 16.3152 85.4219 17.5684 86.2969 18.5437C87.1719 19.519 88.498 20.0066 90.2754 20.0066C91.4329 20.0066 92.4082 19.8061 93.2012 19.405C94.0033 19.004 94.6276 18.53 95.0742 17.9832L96.5098 19.2273C96.0267 19.8744 95.2611 20.476 94.2129 21.032C93.1647 21.588 91.8568 21.866 90.2891 21.866C87.8737 21.866 86.0098 21.2143 84.6973 19.9109C83.3939 18.5984 82.7422 16.8848 82.7422 14.7703ZM100.98 14.5652V14.9617C100.98 16.4018 101.413 17.6003 102.279 18.5574C103.154 19.5144 104.444 19.9929 106.148 19.9929C107.853 19.9929 109.138 19.5144 110.004 18.5574C110.879 17.5912 111.316 16.3927 111.316 14.9617V14.5515C111.316 13.1296 110.879 11.9447 110.004 10.9968C109.138 10.0398 107.853 9.56128 106.148 9.56128C104.435 9.56128 103.145 10.0398 102.279 10.9968C101.413 11.9447 100.98 13.1342 100.98 14.5652ZM106.682 7.67456C108.814 7.67456 110.501 8.31714 111.74 9.60229C112.989 10.8875 113.613 12.5372 113.613 14.5515V14.9753C113.613 17.0352 112.934 18.6986 111.576 19.9656C110.218 21.2325 108.409 21.866 106.148 21.866C103.815 21.866 101.983 21.2371 100.652 19.9792C99.3216 18.7123 98.6562 16.6114 98.6562 13.6765V12.9382C98.6562 9.70256 99.2305 7.17326 100.379 5.35034C101.536 3.52743 103.642 2.43368 106.695 2.06909C108.518 1.85946 109.598 1.66805 109.936 1.49487C110.282 1.31258 110.473 1.08927 110.51 0.824951H112.506C112.415 1.75464 112.018 2.47469 111.316 2.98511C110.624 3.48641 109.22 3.84644 107.105 4.06519C104.663 4.32039 102.986 5.03133 102.074 6.198C101.163 7.36466 100.643 8.93237 100.516 10.9011H100.666C101.149 9.89852 101.901 9.11011 102.922 8.53589C103.943 7.96167 105.196 7.67456 106.682 7.67456ZM116.744 21.4832V7.68823H118.986V16.9441C118.986 17.2449 118.982 17.5365 118.973 17.8191C118.964 18.1016 118.95 18.3933 118.932 18.6941H119.027C119.173 18.4298 119.314 18.1837 119.451 17.9558C119.588 17.7188 119.766 17.4591 119.984 17.1765L127.135 7.68823H129.404V21.4832H127.176V12.241C127.176 11.9402 127.18 11.644 127.189 11.3523C127.199 11.0606 127.212 10.7644 127.23 10.4636H127.121C126.984 10.7188 126.843 10.9695 126.697 11.2156C126.561 11.4617 126.387 11.726 126.178 12.0085L119.027 21.4832H116.744ZM133.479 7.68823H135.721V13.5535H143.732V7.68823H145.988V21.4832H143.732V15.3582H135.721V21.4832H133.479V7.68823ZM149.078 17.4363C149.078 16.0417 149.666 14.9617 150.842 14.196C152.018 13.4213 153.622 13.0339 155.654 13.0339L159.852 13.0476V11.9265C159.852 11.0151 159.564 10.3223 158.99 9.84839C158.416 9.37443 157.454 9.13745 156.105 9.13745C154.802 9.13745 153.836 9.34709 153.207 9.76636C152.587 10.1765 152.277 10.7143 152.277 11.3796V11.5574H150.035V11.3386C150.035 10.1811 150.573 9.21948 151.648 8.45386C152.733 7.68823 154.242 7.30542 156.174 7.30542C158.079 7.30542 159.542 7.69279 160.562 8.46753C161.592 9.23315 162.107 10.4044 162.107 11.9812V18.2019C162.107 18.7944 162.153 19.3549 162.244 19.8835C162.344 20.4122 162.486 20.8725 162.668 21.2644V21.4832H160.508C160.362 21.2553 160.23 20.9591 160.111 20.5945C160.002 20.2299 159.934 19.8471 159.906 19.446C159.523 20.0567 158.872 20.5899 157.951 21.0457C157.04 21.5014 155.868 21.7292 154.438 21.7292C152.806 21.7292 151.503 21.3601 150.527 20.6218C149.561 19.8744 149.078 18.8126 149.078 17.4363ZM151.334 17.3406C151.334 18.17 151.621 18.808 152.195 19.2546C152.779 19.7013 153.686 19.9246 154.916 19.9246C156.183 19.9246 157.322 19.5782 158.334 18.8855C159.346 18.1928 159.852 17.4272 159.852 16.5886V14.6882H155.955C154.424 14.6882 153.271 14.9207 152.496 15.3855C151.721 15.8412 151.334 16.4929 151.334 17.3406ZM166.154 27.239V7.68823H168.219L168.301 9.67065H168.342C168.77 9.05086 169.436 8.51766 170.338 8.07104C171.249 7.62443 172.32 7.40112 173.551 7.40112C175.592 7.40112 177.215 8.04826 178.418 9.34253C179.621 10.6368 180.223 12.3093 180.223 14.3601V14.7566C180.223 16.8347 179.617 18.5255 178.404 19.8289C177.201 21.1231 175.583 21.7703 173.551 21.7703C172.339 21.7703 171.299 21.5743 170.434 21.1824C169.568 20.7813 168.889 20.2846 168.396 19.6921V27.239H166.154ZM168.396 17.3406C168.734 17.9877 169.299 18.5802 170.092 19.1179C170.894 19.6466 171.874 19.9109 173.031 19.9109C174.727 19.9109 175.962 19.4324 176.736 18.4753C177.52 17.5183 177.912 16.2787 177.912 14.7566V14.3601C177.912 12.8653 177.52 11.644 176.736 10.696C175.962 9.74813 174.727 9.27417 173.031 9.27417C171.901 9.27417 170.935 9.53394 170.133 10.0535C169.331 10.5639 168.752 11.1518 168.396 11.8171V17.3406Z" fill="#303030" />
+              </svg>
+            </div>
+          </div>
+          <div class="header__burger">
+            <div class="header__burger-wrapper">
+              <ul class="header__menu">
+                <li class="header__menu-item"><a class="header__menu-link active" href="#section-organizers" onclick="window.closeBurgerMenu()">Организаторы</a></li>
+                <li class="header__menu-item"><a class="header__menu-link" href="#section-speakers" onclick="window.closeBurgerMenu()">Спикеры</a></li>
+                <li class="header__menu-item"><a class="header__menu-link" href="#section-topics" onclick="window.closeBurgerMenu()">Программа</a></li>
+                <li class="header__menu-item"><a class="header__menu-link" href="#section-for-whom" onclick="window.closeBurgerMenu()">Для кого</a></li>
+              </ul>
+              <div class="header__actions">
+                <div class="header__text">Поделитесь мероприятием со своими друзьями и коллегами</div>
+                <button class="ui-button ui-button--p-xs ui-button--medium ui-button--fz-xxs ui-button--outline ui-button--icon-s" onclick="window.openPopup('#popup-share')">
+                  <div class="svg"><svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.2812 13.875H27.1719C27.9385 13.875 28.6738 14.1795 29.2159 14.7216C29.758 15.2637 30.0625 15.999 30.0625 16.7656V30.6406C30.0625 31.4073 29.758 32.1425 29.2159 32.6846C28.6738 33.2267 27.9385 33.5312 27.1719 33.5312H9.82812C9.06148 33.5312 8.32624 33.2267 7.78414 32.6846C7.24205 32.1425 6.9375 31.4073 6.9375 30.6406V16.7656C6.9375 15.999 7.24205 15.2637 7.78414 14.7216C8.32624 14.1795 9.06148 13.875 9.82812 13.875H12.7188M24.2812 9.25L18.5 3.46875M18.5 3.46875L12.7188 9.25M18.5 3.46875V23.1973" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>Поделиться
+                </button>
+              </div>
+            </div>
+          </div>
+          <button class="header__burger-button"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="banner">
+        <div class="banner__bg"><img src="images/banner-bg.svg" alt="" /></div>
+        <div class="inner banner__inner">
+          <div class="banner__main">
+            <div class="banner__megaphone banner__megaphone--1"><img src="images/banner-megaphone-1.png" alt="" /></div>
+            <div class="banner__megaphone banner__megaphone--2"><img src="images/banner-megaphone-2.png" alt="" /></div>
+            <div class="banner__main-content">
+              <div class="banner__info">
+                <div class="banner__info-item">
+                  <div class="banner__info-val">11.04</div>
+                  <div class="banner__info-descr">Старт вебинара</div>
+                </div>
+                <div class="banner__info-item">
+                  <div class="banner__info-val">18:00</div>
+                  <div class="banner__info-descr">По МСК</div>
+                </div>
+              </div>
+              <div class="banner__text">
+                <div class="ui-h1 ui-h1--bold banner__title">Обсудим как продвигать <div class="banner__title-accent">автомобильный бизнес</div>в VК Рекламе </div>
+                <div class="ui-h5 ui-h5--mob-l"><b>БЕСПЛАТНЫЙ</b> онлайн-вебинар </div>
+              </div>
+            </div>
+          </div>
+          <div class="banner__foot"><a class="ui-button ui-button--medium ui-button--fz-s ui-button--mob-bold" href="#section-form-registry">Записаться на вебинар</a>
+            <div class="banner__timeleft">
+              <div class="banner__timeleft-icon"></div>
+              <div class="banner__timeleft-text">До начала вебинара осталось: <div class="banner__timer" data-timer="" data-start="May 1, 2024 00:00:00" data-end="May 30, 2024 17:00:00"><span class="banner__timer-item" data-timer-days="data-timer-days">00 дней</span> : <span class="banner__timer-item" data-timer-hours="data-timer-hours">00 часов</span> : <span class="banner__timer-item" data-timer-minutes="data-timer-minutes">00 минут</span> : <span class="banner__timer-item" data-timer-seconds="data-timer-seconds">00 секунды</span>
+                </div>Успейте записаться! </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section--blur" id="section-topics">
+        <div class="inner">
+          <div class="section-head text-center">
+            <div class="ui-h2 ui-h2--bold">Темы обсуждения </div>
+          </div>
+          <div class="topics">
+            <div class="topics__head">
+              <div class="topics__time">
+                <div class="topics__time-text">00:00</div>
+              </div>
+              <div class="topics__head-descr">Общее время вебинара</div>
+            </div>
+            <div class="topics__main">
+              <div class="topics__item">
+                <div class="topics__decor">
+                  <div class="topics__fire"></div>
+                </div>
+                <div class="topics__text">
+                  <div class="ui-h3 topics__ui-h3 ui-h3--medium ui-h3--font-secondary ui-h3--l-xs ui-h3--mob-bold">«Как продвигать автомобильный бизнес в VK Рекламе?» </div>
+                  <div class="ui-h5 topics__ui-h5 ui-h5--medium">VK Реклама </div>
+                </div>
+              </div>
+              <div class="topics__item">
+                <div class="topics__decor">
+                  <div class="topics__fire"></div>
+                </div>
+                <div class="topics__text">
+                  <div class="ui-h3 topics__ui-h3 ui-h3--medium ui-h3--font-secondary ui-h3--l-xs ui-h3--mob-bold">«Интеграция с ВК рекламой для эффективной работы и новинки для автодилеров» </div>
+                  <div class="ui-h5 topics__ui-h5 ui-h5--medium">CallTouch </div>
+                </div>
+              </div>
+              <div class="topics__item">
+                <div class="topics__decor">
+                  <div class="topics__fire"></div>
+                </div>
+                <div class="topics__text">
+                  <div class="ui-h3 topics__ui-h3 ui-h3--medium ui-h3--font-secondary ui-h3--l-xs ui-h3--mob-bold">«Кейсы по использованию инструментов VK Рекламы для автодилеров» </div>
+                  <div class="ui-h5 topics__ui-h5 ui-h5--medium">Генерация </div>
+                </div>
+              </div>
+              <div class="topics__item">
+                <div class="topics__decor">
+                  <div class="topics__fire"></div>
+                </div>
+                <div class="topics__text">
+                  <div class="ui-h3 topics__ui-h3 ui-h3--medium ui-h3--font-secondary ui-h3--l-xs ui-h3--mob-bold">«Ответы на вопросы тектс текст текст« </div>
+                  <div class="ui-h5 topics__ui-h5 ui-h5--medium">Генерация </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-foot text-center"><a class="ui-button ui-button--mob-w-100" href="#section-form-registry">Записаться на вебинар</a>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section-speakers">
+        <div class="inner">
+          <div class="section-head section-head--mb-s text-center">
+            <div class="ui-h2">Спикеры вебинара </div>
+          </div>
+          <div class="speakers">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="speakers__item swiper-slide">
+                  <div class="speakers__img"><img class="speakers__decor" src="images/speakers-decor-1.svg" alt="" /><img class="speakers__photo" src="images/speakers-photo-1.jpg" alt="" /></div>
+                  <div class="speakers__text">
+                    <div class="ui-h3 speakers__ui-h3 ui-h3--font-secondary ui-h3--bold">Авдеев <div>Андрей</div>
+                    </div>
+                    <div class="ui-p3 speakers__ui-p3 ui-p3--medium">Руководитель агентства “Генерация” </div>
+                  </div>
+                </div>
+                <div class="speakers__item swiper-slide">
+                  <div class="speakers__img"><img class="speakers__decor" src="images/speakers-decor-2.svg" alt="" /><img class="speakers__photo" src="images/speakers-photo-1.jpg" alt="" /></div>
+                  <div class="speakers__text">
+                    <div class="ui-h3 speakers__ui-h3 ui-h3--font-secondary ui-h3--bold">Синибабнов <div>Владислав</div>
+                    </div>
+                    <div class="ui-p3 speakers__ui-p3 ui-p3--medium">Эксперт ВК Рекламы в компании “Генерация” </div>
+                  </div>
+                </div>
+                <div class="speakers__item swiper-slide">
+                  <div class="speakers__img"><img class="speakers__decor" src="images/speakers-decor-3.svg" alt="" /><img class="speakers__photo" src="images/speakers-photo-3.jpg" alt="" /></div>
+                  <div class="speakers__text">
+                    <div class="ui-h3 speakers__ui-h3 ui-h3--font-secondary ui-h3--bold">Валерия <div>Логвиненко</div>
+                    </div>
+                    <div class="ui-p3 speakers__ui-p3 ui-p3--medium">Старший менеджер VK Рекламы по работе с агентствами </div>
+                  </div>
+                </div>
+                <div class="speakers__item swiper-slide">
+                  <div class="speakers__img"><img class="speakers__decor" src="images/speakers-decor-4.svg" alt="" /><img class="speakers__photo" src="images/speakers-photo-4.jpg" alt="" /></div>
+                  <div class="speakers__text">
+                    <div class="ui-h3 speakers__ui-h3 ui-h3--font-secondary ui-h3--bold">Евгений <div>Енов</div>
+                    </div>
+                    <div class="ui-p3 speakers__ui-p3 ui-p3--medium">Руководитель отдела продаж Calltouch </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ui-swiper-pagination speakers__ui-swiper-pagination">
+                <div class="swiper-pagination">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section-for-whom">
+        <div class="for-whom">
+          <div class="inner for-whom__inner">
+            <div class="section-head text-center text-white">
+              <div class="ui-h2 ui-h2--bold">Кому будет интересно: </div>
+            </div>
+            <div class="for-whom__main">
+              <div class="for-whom__item">
+                <div class="for-whom__wrapper">
+                  <div class="for-whom__img"><img src="images/for-whom-1.svg" alt="" /></div>
+                  <div class="ui-h3 ui-h3--semibold ui-h3--l-s ui-h3--mob-bold">Маркетологам </div>
+                </div>
+              </div>
+              <div class="for-whom__item">
+                <div class="for-whom__wrapper">
+                  <div class="for-whom__img"><img src="images/for-whom-2.png" alt="" /></div>
+                  <div class="ui-h3 ui-h3--semibold ui-h3--l-s ui-h3--mob-bold">Руководителям отдела продаж </div>
+                </div>
+              </div>
+              <div class="for-whom__item">
+                <div class="for-whom__wrapper">
+                  <div class="for-whom__img"><img src="images/for-whom-3.png" alt="" /></div>
+                  <div class="ui-h3 ui-h3--semibold ui-h3--l-s ui-h3--mob-bold">Директорам </div>
+                </div>
+              </div>
+              <div class="for-whom__item">
+                <div class="for-whom__wrapper">
+                  <div class="for-whom__img"><img src="images/for-whom-4.svg" alt="" /></div>
+                  <div class="ui-h3 ui-h3--semibold ui-h3--l-s ui-h3--mob-bold">Собственникам бизнеса </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section-organizers">
+        <div class="inner">
+          <div class="section-head text-center">
+            <div class="ui-h2">Организаторы </div>
+          </div>
+          <div class="organizers"><a class="organizers__item" href="#">
+              <div class="organizers__wrapper">
+                <div class="organizers__logo"><img src="images/organizers_logo_generation.svg" alt="" /></div>
+                <div class="ui-p1 ui-p1--medium">Digital-агентство полного цикла с максимальным погружением в проект </div>
+              </div>
+            </a><a class="organizers__item" href="#">
+              <div class="organizers__wrapper">
+                <div class="organizers__logo"><img src="images/organizers_logo_vk.svg" alt="" /></div>
+                <div class="ui-p1 ui-p1--medium">Рекламная платформа </div>
+              </div>
+            </a><a class="organizers__item" href="#">
+              <div class="organizers__wrapper">
+                <div class="organizers__logo"><img src="images/organizers_logo_calltouch.png" alt="" /></div>
+                <div class="ui-p1 ui-p1--medium">Платформа <br>омниканального маркетинга </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section-form-registry">
+        <div class="form-registry">
+          <div class="form-registry__bg"><img src="images/form-registry-bg.png" alt="" /></div>
+          <div class="form-registry__coin form-registry__coin--1"><img src="images/form-registry-coin-1.png" alt="" /></div>
+          <div class="form-registry__coin form-registry__coin--2"><img src="images/form-registry-coin-2.png" alt="" /></div>
+          <div class="form-registry__coin form-registry__coin--3"><img src="images/form-registry-coin-3.png" alt="" /></div>
+          <div class="inner">
+            <div class="form-registry__wrapper">
+              <div class="section-head section-head--mb-s text-center">
+                <div class="ui-h1 ui-h1--bold">Успейте зарегистрироваться <br>на <span class="form-registry__text-anim">вебинар</span>
+                </div>
+              </div>
+              <div class="form-registry__main">
+                <div class="form-registry__row">
+                  <div class="ui-input error" data-error-text="Введите верные данные">
+                    <input id="form-registry-name" type="text" placeholder="Имя" name="name" />
+                  </div>
+                </div>
+                <div class="form-registry__row">
+                  <div class="ui-input" data-error-text="Введите верные данные">
+                    <input id="form-registry-phone" type="text" placeholder="Телефон" name="phone" />
+                  </div>
+                </div>
+                <div class="form-registry__row">
+                  <div class="ui-input" data-error-text="Введите верные данные">
+                    <input id="form-registry-email" type="email" placeholder="Email" name="email" />
+                  </div>
+                </div>
+                <div class="form-registry__row">
+                  <div class="ui-input" data-error-text="Введите верные данные">
+                    <input id="form-registry-company" type="text" placeholder="Название компании" name="company" />
+                  </div>
+                </div>
+                <div class="form-registry__row">
+                  <div class="ui-input" data-error-text="Введите верные данные">
+                    <input id="form-registry-position" type="text" placeholder="Должность" name="position" />
+                  </div>
+                </div>
+                <div class="form-registry__row">
+                  <div class="ui-textarea error">
+                    <textarea id="form-registry-qestion" placeholder="Вопрос спикерам" name="qestion" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="form-registry__row form-registry__row--mt-l">
+                  <button class="ui-button ui-button--w-100">Записаться на вебинар </button>
+                </div>
+                <div class="form-registry__row text-center">
+                  <div class="ui-p3 ui-p3--mob-s text-grey-56">Нажимая кнопку “Отправить” вы соглашаетесь с <a class="text-blue" href="#">политикой конфиденциальности</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="popup" id="popup-share">
+      <div class="popup__container">
+        <button class="popup__close" onclick="window.closePopup($(this).parents('.popup'))">
+          <div class="svg"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.30699 7.3625L14.1676 2.5005C14.2989 2.37366 14.4037 2.22193 14.4758 2.05418C14.5478 1.88642 14.5857 1.70599 14.5873 1.52342C14.5889 1.34085 14.5541 1.15979 14.485 0.990809C14.4159 0.821827 14.3138 0.668305 14.1847 0.539203C14.0556 0.4101 13.902 0.308002 13.7331 0.238866C13.5641 0.16973 13.383 0.13494 13.2004 0.136527C13.0179 0.138113 12.8374 0.176044 12.6697 0.248107C12.5019 0.320169 12.3502 0.424919 12.2234 0.556246L7.36136 5.41687L2.50074 0.556246C2.3739 0.424919 2.22218 0.320169 2.05442 0.248107C1.88667 0.176044 1.70624 0.138113 1.52367 0.136527C1.3411 0.13494 1.16004 0.16973 0.991053 0.238866C0.822071 0.308002 0.668549 0.4101 0.539447 0.539203C0.410345 0.668305 0.308246 0.821827 0.23911 0.990809C0.169974 1.15979 0.135184 1.34085 0.136771 1.52342C0.138357 1.70599 0.176288 1.88642 0.248351 2.05418C0.320413 2.22193 0.425164 2.37366 0.55649 2.5005L5.41712 7.36112L0.55649 12.2231C0.425164 12.35 0.320413 12.5017 0.248351 12.6694C0.176288 12.8372 0.138357 13.0176 0.136771 13.2002C0.135184 13.3828 0.169974 13.5638 0.23911 13.7328C0.308246 13.9018 0.410345 14.0553 0.539447 14.1844C0.668549 14.3135 0.822071 14.4156 0.991053 14.4848C1.16004 14.5539 1.3411 14.5887 1.52367 14.5871C1.70624 14.5855 1.88667 14.5476 2.05442 14.4755C2.22218 14.4034 2.3739 14.2987 2.50074 14.1674L7.36136 9.30675L12.2234 14.1674C12.3502 14.2987 12.5019 14.4034 12.6697 14.4755C12.8374 14.5476 13.0179 14.5855 13.2004 14.5871C13.383 14.5887 13.5641 14.5539 13.7331 14.4848C13.902 14.4156 14.0556 14.3135 14.1847 14.1844C14.3138 14.0553 14.4159 13.9018 14.485 13.7328C14.5541 13.5638 14.5889 13.3828 14.5873 13.2002C14.5857 13.0176 14.5478 12.8372 14.4758 12.6694C14.4037 12.5017 14.2989 12.35 14.1676 12.2231L9.30699 7.3625Z" fill="currentColor" />
+            </svg>
+          </div>
+        </button>
+        <div class="section-head popup__section-head section-head--mb-xs">
+          <div class="ui-h4 ui-h4--semibold ui-h4--t-fz-l text-brown">Выберите удобный способ: </div>
+        </div>
+        <div class="share">
+          <div class="share__item">
+            <button class="share__button">
+              <div class="share__icon"><img class="share__icon-visible" src="images/share_vk.svg" alt="" /></div>
+              <div class="ui-p3 ui-p3--medium">ВК </div>
+            </button>
+          </div>
+          <div class="share__item">
+            <button class="share__button">
+              <div class="share__icon"><img class="share__icon-visible" src="images/share_wa.svg" alt="" /></div>
+              <div class="ui-p3 ui-p3--medium">WhatsApp </div>
+            </button>
+          </div>
+          <div class="share__item">
+            <button class="share__button">
+              <div class="share__icon"><img class="share__icon-visible" src="images/share_tg.svg" alt="" /></div>
+              <div class="ui-p3 ui-p3--medium">Telegram </div>
+            </button>
+          </div>
+          <div class="share__item">
+            <button class="share__button" onclick="window.shareButtonCopy(this)" data-copy-value="copy value">
+              <div class="share__icon"><img class="share__icon-visible" src="images/share_link.svg" alt="" /><img class="share__icon-hidden" src="images/share_link_done.svg" alt="" /></div>
+              <div class="ui-p3 ui-p3--medium">Копировать <br>ссылку </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="inner">
+        <div class="footer__policies"><a class="footer__policy" href="#">Политика конфиденциальности</a><a class="footer__policy" href="https://promo01.ru/" target="_blank">Разработка сайтов “Генерация”</a></div>
+      </div>
+    </footer>
+    <div class="loader">
+      <div class="loader__main">
+        <div class="loader__item"><img src="images/loader-item-1.svg" alt="" /></div>
+        <div class="loader__item"><img src="images/loader-item-2.svg" alt="" /></div>
+        <div class="loader__item"><img src="images/loader-item-3.png" alt="" /></div>
+      </div>
+    </div>
+  </div>
+  <script src="libs/jquery/jquery-3.6.4.min.js"></script>
+  <script src="libs/swiper/swiper-bundle.min.js"></script>
+</body>
+
+</html>

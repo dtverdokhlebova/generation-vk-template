@@ -1,0 +1,33 @@
+mixin speakers(mods)
+  -
+    const baseName = 'speakers'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  -
+    const items =[
+      { photo: 'speakers-photo-1.jpg', name: 'Авдеев <div>Андрей</div>', post: 'Руководитель агентства “Генерация”' },
+      { photo: 'speakers-photo-1.jpg', name: 'Синибабнов <div>Владислав</div>', post: 'Эксперт ВК Рекламы в компании “Генерация”' },
+      { photo: 'speakers-photo-3.jpg', name: 'Валерия <div>Логвиненко</div>', post: 'Старший менеджер VK Рекламы по работе с агентствами ' },
+      { photo: 'speakers-photo-4.jpg', name: 'Евгений <div>Енов</div>', post: 'Руководитель отдела продаж Calltouch' },
+    ]
+
+  .speakers(class=allMods)&attributes(attributes)
+    .swiper
+      .swiper-wrapper
+        each item, index in items
+          .speakers__item.swiper-slide
+            .speakers__img
+              img.speakers__decor(src=`../../images/speakers-decor-${index+1}.svg`, alt='')
+              img.speakers__photo(src=`../../images/${item.photo}`, alt='')
+            .speakers__text
+              +ui-h3(item.name, 'speakers, --font-secondary, --bold')
+              +ui-p3(item.post, 'speakers, --medium')
+      +ui-swiper-pagination('speakers')
+    block

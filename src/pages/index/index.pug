@@ -1,0 +1,22 @@
+extends ../../layouts/layout
+
+block variables
+  -
+    const pageTitle = 'Index'
+
+  -
+    const pages = [
+      { text: 'Главная', href: 'main.html' },
+      { text: 'Страница благодарности после отправки формы', href: 'form-thank.html' },
+    ]
+
+block content
+  main.main
+    br
+    +section
+      .inner
+        each item in pages
+          +ui-p1
+            a(href=item.href)=item.text
+            br
+            br

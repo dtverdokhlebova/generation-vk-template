@@ -1,0 +1,29 @@
+block variables
+include ../blocks/mixins
+
+doctype html
+html(lang='ru' class=htmlMods)
+  block head
+    head
+      meta(charset='utf-8')
+      title=pageTitle
+      meta(content='"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport')
+      meta(content='ie=edge' http-equiv='x-ua-compatible')
+      link(href='' rel='icon' type='image/x-icon')
+      link(href='/libs/swiper/swiper-bundle.min.css' rel='stylesheet')
+
+  body(ontouchstart)
+    .wrapper
+      if isEmptyPage
+        block content
+      else
+        block header
+          include ../blocks/header/header
+        block content
+        block footer
+          include ../blocks/footer/footer
+      +loader
+    block scripts
+      script(src='/libs/jquery/jquery-3.6.4.min.js')
+      script(src='/libs/swiper/swiper-bundle.min.js')
+      script(type='module' src='../../js/index.js')

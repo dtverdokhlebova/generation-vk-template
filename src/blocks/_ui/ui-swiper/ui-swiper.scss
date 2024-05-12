@@ -1,0 +1,26 @@
+.ui-swiper-pagination {
+  .swiper-pagination {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    .swiper-pagination {
+      &-bullet {
+        width: 40px;
+        height: 5px;
+        margin: 0;
+        background: #f5f5f5;
+        border-radius: 6px;
+        opacity: 1;
+        transition: $transitionDuration;
+        &-active {
+          background: $blue;
+        }
+      }
+    }
+  }
+  &--locked {
+    display: none;
+  }
+}

@@ -1,0 +1,41 @@
+extends ../../layouts/layout
+
+block variables
+  -
+    const pageName = 'main'
+    const pageTitle = 'Main'
+
+block content
+  main.main
+    +banner
+
+    +section('--blur')#section-topics
+      .inner
+        +section-head().text-center
+          +ui-h2('Темы обсуждения', '--bold')
+        +topics
+        +section-foot.text-center
+          +ui-button('Записаться на вебинар', '--mob-w-100')(href='#section-form-registry')
+
+    +section#section-speakers
+      .inner
+        +section-head('--mb-s').text-center
+          +ui-h2('Спикеры вебинара')
+        +speakers
+
+    +section#section-for-whom
+      +for-whom
+
+    +section#section-organizers
+      .inner
+        +section-head.text-center
+          +ui-h2('Организаторы')
+        +organizers
+
+    +section#section-form-registry
+      +form-registry
+
+  +popup#popup-share
+    +section-head('popup, --mb-xs')
+      +ui-h4('Выберите удобный способ:', '--semibold, --t-fz-l').text-brown
+    +share

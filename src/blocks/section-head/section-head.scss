@@ -1,0 +1,21 @@
+.section-head {
+  margin-bottom: 50px;
+  @include media-laptop {
+    margin-bottom: 40px;
+  }
+  @include media-tablet {
+    margin-bottom: 35px;
+  }
+  &--mb-s {
+    margin-bottom: 40px;
+    @include media-laptop {
+      margin-bottom: 30px;
+    }
+    @include media-tablet {
+      margin-bottom: 25px;
+    }
+  }
+  &--mb-xs {
+    margin-bottom: 20px;
+  }
+}

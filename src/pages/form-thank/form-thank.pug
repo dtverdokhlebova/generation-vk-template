@@ -1,0 +1,16 @@
+extends ../../layouts/layout
+
+block variables
+  -
+    const pageName = 'form-thank'
+    const pageTitle = 'form-thank'
+    const isEmptyPage = true
+
+block content
+  main.main
+    +form-thank
+
+    +popup#popup-share
+      +section-head('popup, --mb-xs')
+        +ui-h4('Выберите удобный способ:', '--semibold, --t-fz-l').text-brown
+      +share

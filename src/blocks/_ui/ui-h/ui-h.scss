@@ -1,0 +1,66 @@
+.ui-h1 {
+  font: 64px/1.1 $fontSc;
+  @include media-laptop {
+    font-size: 38px;
+  }
+  @include media-tablet {
+    font-size: min(25px, 5.84vw);
+  }
+}
+.ui-h2 {
+  font: 500 50px/1 $fontSc;
+  @include media-laptop {
+    font-size: 32px;
+  }
+  @include media-tablet {
+    font-size: min(25px, 5.84vw);
+  }
+}
+.ui-h3 {
+  font-size: 35px;
+  line-height: 1.21;
+  &--l-s {
+    @include media-laptop {
+      font-size: 20px;
+    }
+  }
+  &--l-xs {
+    @include media-laptop {
+      font-size: 18px;
+    }
+  }
+}
+.ui-h4 {
+  font: 500 30px/1.1 $fontSc;
+}
+.ui-h5 {
+  font-size: 24px;
+  line-height: 1.21;
+  @include media-laptop {
+    font-size: 14px;
+  }
+  &--mob-l {
+    @include media-laptop {
+      font-size: 18px;
+    }
+  }
+}
+[class*='ui-h'] {
+  &[class*='--medium'] {
+    font-weight: 500;
+  }
+  &[class*='--semibold'] {
+    font-weight: 600;
+  }
+  &[class*='--bold'] {
+    font-weight: 700;
+  }
+  &[class*='--mob-bold'] {
+    @include media-tablet {
+      font-weight: 700;
+    }
+  }
+  &[class*='--font-secondary'] {
+    font-family: $fontSc;
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>form-thank</title>
+  <meta content="&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <link href="" rel="icon" type="image/x-icon">
+  <link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script type="module" crossorigin src="scripts/scripts.js"></script>
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body ontouchstart>
+  <div class="wrapper">
+    <main class="main">
+      <div class="form-thank">
+        <div class="form-thank__img"><img src="images/form-thank-bg.png" alt="" /></div><a class="form-thank__close" href="#">
+          <div class="svg"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.30699 7.3625L14.1676 2.5005C14.2989 2.37366 14.4037 2.22193 14.4758 2.05418C14.5478 1.88642 14.5857 1.70599 14.5873 1.52342C14.5889 1.34085 14.5541 1.15979 14.485 0.990809C14.4159 0.821827 14.3138 0.668305 14.1847 0.539203C14.0556 0.4101 13.902 0.308002 13.7331 0.238866C13.5641 0.16973 13.383 0.13494 13.2004 0.136527C13.0179 0.138113 12.8374 0.176044 12.6697 0.248107C12.5019 0.320169 12.3502 0.424919 12.2234 0.556246L7.36136 5.41687L2.50074 0.556246C2.3739 0.424919 2.22218 0.320169 2.05442 0.248107C1.88667 0.176044 1.70624 0.138113 1.52367 0.136527C1.3411 0.13494 1.16004 0.16973 0.991053 0.238866C0.822071 0.308002 0.668549 0.4101 0.539447 0.539203C0.410345 0.668305 0.308246 0.821827 0.23911 0.990809C0.169974 1.15979 0.135184 1.34085 0.136771 1.52342C0.138357 1.70599 0.176288 1.88642 0.248351 2.05418C0.320413 2.22193 0.425164 2.37366 0.55649 2.5005L5.41712 7.36112L0.55649 12.2231C0.425164 12.35 0.320413 12.5017 0.248351 12.6694C0.176288 12.8372 0.138357 13.0176 0.136771 13.2002C0.135184 13.3828 0.169974 13.5638 0.23911 13.7328C0.308246 13.9018 0.410345 14.0553 0.539447 14.1844C0.668549 14.3135 0.822071 14.4156 0.991053 14.4848C1.16004 14.5539 1.3411 14.5887 1.52367 14.5871C1.70624 14.5855 1.88667 14.5476 2.05442 14.4755C2.22218 14.4034 2.3739 14.2987 2.50074 14.1674L7.36136 9.30675L12.2234 14.1674C12.3502 14.2987 12.5019 14.4034 12.6697 14.4755C12.8374 14.5476 13.0179 14.5855 13.2004 14.5871C13.383 14.5887 13.5641 14.5539 13.7331 14.4848C13.902 14.4156 14.0556 14.3135 14.1847 14.1844C14.3138 14.0553 14.4159 13.9018 14.485 13.7328C14.5541 13.5638 14.5889 13.3828 14.5873 13.2002C14.5857 13.0176 14.5478 12.8372 14.4758 12.6694C14.4037 12.5017 14.2989 12.35 14.1676 12.2231L9.30699 7.3625Z" fill="currentColor" />
+            </svg>
+          </div>
+        </a>
+        <div class="inner">
+          <div class="form-thank__wrapper">
+            <div class="form-thank__text">
+              <div class="form-thank__title">Данные успешно отправлены! <br>Мы скоро свяжемся с&nbsp;вами.</div>
+              <button class="ui-button ui-button--medium ui-button--fz-xs ui-button--al-left" onclick="window.openPopup('#popup-share')">
+                <div class="svg"><svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.2812 13.875H27.1719C27.9385 13.875 28.6738 14.1795 29.2159 14.7216C29.758 15.2637 30.0625 15.999 30.0625 16.7656V30.6406C30.0625 31.4073 29.758 32.1425 29.2159 32.6846C28.6738 33.2267 27.9385 33.5312 27.1719 33.5312H9.82812C9.06148 33.5312 8.32624 33.2267 7.78414 32.6846C7.24205 32.1425 6.9375 31.4073 6.9375 30.6406V16.7656C6.9375 15.999 7.24205 15.2637 7.78414 14.7216C8.32624 14.1795 9.06148 13.875 9.82812 13.875H12.7188M24.2812 9.25L18.5 3.46875M18.5 3.46875L12.7188 9.25M18.5 3.46875V23.1973" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>Поделиться вебинаром с&nbsp;коллегами
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="popup-share">
+        <div class="popup__container">
+          <button class="popup__close" onclick="window.closePopup($(this).parents('.popup'))">
+            <div class="svg"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.30699 7.3625L14.1676 2.5005C14.2989 2.37366 14.4037 2.22193 14.4758 2.05418C14.5478 1.88642 14.5857 1.70599 14.5873 1.52342C14.5889 1.34085 14.5541 1.15979 14.485 0.990809C14.4159 0.821827 14.3138 0.668305 14.1847 0.539203C14.0556 0.4101 13.902 0.308002 13.7331 0.238866C13.5641 0.16973 13.383 0.13494 13.2004 0.136527C13.0179 0.138113 12.8374 0.176044 12.6697 0.248107C12.5019 0.320169 12.3502 0.424919 12.2234 0.556246L7.36136 5.41687L2.50074 0.556246C2.3739 0.424919 2.22218 0.320169 2.05442 0.248107C1.88667 0.176044 1.70624 0.138113 1.52367 0.136527C1.3411 0.13494 1.16004 0.16973 0.991053 0.238866C0.822071 0.308002 0.668549 0.4101 0.539447 0.539203C0.410345 0.668305 0.308246 0.821827 0.23911 0.990809C0.169974 1.15979 0.135184 1.34085 0.136771 1.52342C0.138357 1.70599 0.176288 1.88642 0.248351 2.05418C0.320413 2.22193 0.425164 2.37366 0.55649 2.5005L5.41712 7.36112L0.55649 12.2231C0.425164 12.35 0.320413 12.5017 0.248351 12.6694C0.176288 12.8372 0.138357 13.0176 0.136771 13.2002C0.135184 13.3828 0.169974 13.5638 0.23911 13.7328C0.308246 13.9018 0.410345 14.0553 0.539447 14.1844C0.668549 14.3135 0.822071 14.4156 0.991053 14.4848C1.16004 14.5539 1.3411 14.5887 1.52367 14.5871C1.70624 14.5855 1.88667 14.5476 2.05442 14.4755C2.22218 14.4034 2.3739 14.2987 2.50074 14.1674L7.36136 9.30675L12.2234 14.1674C12.3502 14.2987 12.5019 14.4034 12.6697 14.4755C12.8374 14.5476 13.0179 14.5855 13.2004 14.5871C13.383 14.5887 13.5641 14.5539 13.7331 14.4848C13.902 14.4156 14.0556 14.3135 14.1847 14.1844C14.3138 14.0553 14.4159 13.9018 14.485 13.7328C14.5541 13.5638 14.5889 13.3828 14.5873 13.2002C14.5857 13.0176 14.5478 12.8372 14.4758 12.6694C14.4037 12.5017 14.2989 12.35 14.1676 12.2231L9.30699 7.3625Z" fill="currentColor" />
+              </svg>
+            </div>
+          </button>
+          <div class="section-head popup__section-head section-head--mb-xs">
+            <div class="ui-h4 ui-h4--semibold ui-h4--t-fz-l text-brown">Выберите удобный способ: </div>
+          </div>
+          <div class="share">
+            <div class="share__item">
+              <button class="share__button">
+                <div class="share__icon"><img class="share__icon-visible" src="images/share_vk.svg" alt="" /></div>
+                <div class="ui-p3 ui-p3--medium">ВК </div>
+              </button>
+            </div>
+            <div class="share__item">
+              <button class="share__button">
+                <div class="share__icon"><img class="share__icon-visible" src="images/share_wa.svg" alt="" /></div>
+                <div class="ui-p3 ui-p3--medium">WhatsApp </div>
+              </button>
+            </div>
+            <div class="share__item">
+              <button class="share__button">
+                <div class="share__icon"><img class="share__icon-visible" src="images/share_tg.svg" alt="" /></div>
+                <div class="ui-p3 ui-p3--medium">Telegram </div>
+              </button>
+            </div>
+            <div class="share__item">
+              <button class="share__button" onclick="window.shareButtonCopy(this)" data-copy-value="copy value">
+                <div class="share__icon"><img class="share__icon-visible" src="images/share_link.svg" alt="" /><img class="share__icon-hidden" src="images/share_link_done.svg" alt="" /></div>
+                <div class="ui-p3 ui-p3--medium">Копировать <br>ссылку </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="loader">
+      <div class="loader__main">
+        <div class="loader__item"><img src="images/loader-item-1.svg" alt="" /></div>
+        <div class="loader__item"><img src="images/loader-item-2.svg" alt="" /></div>
+        <div class="loader__item"><img src="images/loader-item-3.png" alt="" /></div>
+      </div>
+    </div>
+  </div>
+  <script src="libs/jquery/jquery-3.6.4.min.js"></script>
+  <script src="libs/swiper/swiper-bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+.section {
+  &:not(:first-child) {
+    padding-top: 190px;
+    @include media-laptop {
+      padding-top: 94px;
+    }
+  }
+  &--blur {
+    position: relative;
+    z-index: 1;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 258px;
+      height: 255px;
+      background: $blue;
+      filter: blur(280px);
+      @include media-laptop {
+        display: none;
+      }
+    }
+    &::before {
+      left: -100px;
+    }
+    &::after {
+      right: -100px;
+    }
+  }
+}

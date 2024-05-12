@@ -1,0 +1,42 @@
+.share {
+  display: flex;
+  gap: 30px;
+  @include media-tablet {
+    justify-content: space-between;
+  }
+  @include media-mobile {
+    gap: 10px;
+  }
+  &__button {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    font-family: $font;
+    color: inherit;
+    overflow: hidden;
+    cursor: pointer;
+    &--active {
+      .share__icon {
+        &-hidden {
+          display: block;
+        }
+      }
+    }
+  }
+  &__icon {
+    position: relative;
+    width: 69px;
+    height: 69px;
+    margin: 0 auto 10px;
+    @include media-mobile {
+      width: 40px;
+      height: 40px;
+    }
+    &-hidden {
+      position: absolute;
+      inset: 0;
+      display: none;
+      width: 100%;
+    }
+  }
+}

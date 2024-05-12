@@ -1,0 +1,51 @@
+.organizers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  @include media-tablet {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+  }
+  &__item {
+    position: relative;
+    display: block;
+    text-align: center;
+    color: #82848d;
+    border-radius: 15px;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: $blue;
+      border-radius: inherit;
+      transform: rotate(-1.59deg);
+      transition: $transitionDuration;
+    }
+    @include media-hover {
+      &::before {
+        transform: rotate(1.59deg);
+      }
+    }
+  }
+  &__wrapper {
+    position: relative;
+    height: 100%;
+    padding: 36px;
+    background: #3b3c3e;
+    border-radius: inherit;
+    @include media-laptop {
+      padding: 20px;
+    }
+    @include media-tablet {
+      padding: 30px 28px;
+    }
+  }
+  &__logo {
+    max-width: 320px;
+    margin: 0 auto 15px;
+    @include media-laptop {
+      max-width: 248px;
+      margin-bottom: 10px;
+    }
+  }
+}

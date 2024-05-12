@@ -1,0 +1,32 @@
+mixin for-whom(mods)
+  -
+    const baseName = 'for-whom'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  -
+    const items =[
+      { img: 'for-whom-1.svg', text: 'Маркетологам' },
+      { img: 'for-whom-2.png', text: 'Руководителям отдела продаж' },
+      { img: 'for-whom-3.png', text: 'Директорам' },
+      { img: 'for-whom-4.svg', text: 'Собственникам бизнеса' },
+    ]
+
+  .for-whom(class=allMods)&attributes(attributes)
+    .inner.for-whom__inner
+      +section-head.text-center.text-white
+        +ui-h2('Кому будет интересно:', '--bold')
+      .for-whom__main
+        each item in items
+          .for-whom__item
+            .for-whom__wrapper
+              .for-whom__img
+                img(src=`../../images/${item.img}`, alt='')
+              +ui-h3(item.text, '--semibold, --l-s, --mob-bold')
+    block

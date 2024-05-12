@@ -1,0 +1,15 @@
+mixin ui-input(id, mods, wrapperClass, errorText)
+  -
+    const baseName = 'ui-input'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .ui-input(class=allMods class=wrapperClass data-error-text=errorText)
+    input(id=id type='text')&attributes(attributes)
+    block

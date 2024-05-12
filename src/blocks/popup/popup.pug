@@ -1,0 +1,18 @@
+mixin popup(mods)
+  -
+    const baseName = 'popup'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .popup(class=allMods)&attributes(attributes)
+    .popup__container
+      button.popup__close(onclick=`window.closePopup($(this).parents('.popup'))`)
+        +svg
+          include ../../images/icon_cross.svg
+      block
