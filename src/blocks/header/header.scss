@@ -24,7 +24,7 @@
     background: #ecf5ff;
     border-radius: 160px;
     @include media-tablet-horizontal {
-      padding: 25px 0;
+      padding: 25px 0 12px;
       background: $white;
       border-radius: 0;
     }

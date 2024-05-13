@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
   loader()
   header()
   banner()
-  formRegistry()
   popup()
   share()
   speakers()
+  formRegistry()
 })
 
 function loader() {
@@ -21,7 +21,7 @@ function loader() {
 function banner() {
   const block = document.querySelector('.banner')
   if (block) {
-    block.addEventListener('mousemove', bannerMegaphoneAnim)
+    bannerHeight()
     setInterval(function () { makeTimer() }, 1000)
   }
 
@@ -33,6 +33,13 @@ function banner() {
   window.addEventListener('resize', getWidthTimeleft)
 }
 
+function bannerHeight() {
+  const block = document.querySelector('.banner__inner')
+  const bannerHeight = block.clientHeight
+
+  block.style.minHeight = `${bannerHeight}px`
+}
+
 function bannerBgAnim() {
   const scrollingImage = document.querySelector('.banner__bg')
 
@@ -41,16 +48,6 @@ function bannerBgAnim() {
       scrollingImage.classList.add('banner__bg--visible')
     }
   })
-}
-
-function bannerMegaphoneAnim(event) {
-  const elements = document.querySelectorAll('.banner__megaphone img')
-  const speed = 5
-  for (const element of elements) {
-    const x = (event.pageX * speed - window.innerWidth / 2) / 100
-    const y = (event.pageY * speed - window.innerHeight / 2) / 100
-    element.style.transform = `translateX(${x}px) translateY(${y}px)`
-  }
 }
 
 function getWidthTimeleft() {
@@ -112,12 +109,11 @@ function formRegistry() {
     // проверяем, виден ли элемент в области просмотра
     function isElementInViewport(element) {
       const rect = element.getBoundingClientRect()
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      )
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight
+      const elementTop = rect.top
+      const elementBottom = rect.bottom
+
+      return (elementTop < viewportHeight / 2 && elementBottom > viewportHeight / 2)
     }
 
     // анимация текста
@@ -125,7 +121,7 @@ function formRegistry() {
       if (index < text.length) {
         textElement.textContent += text.charAt(index)
         index++
-        setTimeout(typeWriter, 150)
+        setTimeout(typeWriter, 200)
       }
     }
 

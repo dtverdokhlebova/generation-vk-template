@@ -4,16 +4,20 @@
   &__inner {
     position: relative;
     z-index: 1;
-    min-height: 100vh;
+    min-height: calc(100dvh - var(--header-height, var(--header-height-initial)));
     padding-top: 160px;
     padding-bottom: 20px;
     @include media-laptop {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding-top: 80px;
     }
     @include media-tablet {
-      padding-top: 40px;
+      padding-top: min(40px, 4vh);
+    }
+    @media screen and (max-height: 760px) and (max-width: $mediaWidthTablet) {
+      padding-top: min(40px, 3vh);
     }
   }
   &__bg {
@@ -56,6 +60,10 @@
   }
   &__megaphone {
     position: absolute;
+    animation: float-y-l 5s ease-in-out infinite;
+    @include media-tablet {
+      animation: float-y 4s ease-in-out infinite;
+    }
     &--1 {
       top: 0;
       left: -32px;
@@ -66,11 +74,19 @@
         left: 10%;
         width: 270px;
       }
+      @include media-tablet {
+        width: min(270px, 34vh);
+      }
+      @media screen and (max-height: 760px) and (max-width: $mediaWidthTablet) {
+        bottom: 0;
+        width: min(270px, 22vh);
+      }
     }
     &--2 {
       top: 50%;
       right: 125px;
       width: 344px;
+      animation-delay: 0.6s;
       @include media-laptop {
         top: unset;
         bottom: 100px;
@@ -79,6 +95,13 @@
       @include media-tablet {
         right: auto;
         left: 40%;
+        width: min(174px, 22vh);
+      }
+      @media screen and (max-height: 760px) and (max-width: $mediaWidthTablet) {
+        right: min(20%, 60px);
+        bottom: 50px;
+        left: auto;
+        width: min(174px, 15vh);
       }
     }
   }
@@ -87,6 +110,12 @@
     padding-bottom: 54px;
     @include media-laptop {
       padding-bottom: 260px;
+    }
+    @include media-tablet {
+      padding-bottom: min(260px, 33vh);
+    }
+    @media screen and (max-height: 760px) and (max-width: $mediaWidthTablet) {
+      padding-bottom: min(260px, 20vh);
     }
     &-content {
       position: relative;
@@ -97,7 +126,7 @@
     justify-content: center;
     margin-bottom: 60px;
     @include media-tablet {
-      margin-bottom: 40px;
+      margin-bottom: min(40px, 4vh);
     }
     &-item {
       position: relative;
@@ -143,6 +172,12 @@
     margin-bottom: 24px;
     @include media-tablet {
       margin-bottom: 30px;
+    }
+    @include media-tablet {
+      margin-bottom: min(30px, 3vh);
+    }
+    @media screen and (max-height: 760px) and (max-width: $mediaWidthTablet) {
+      margin-bottom: min(30px, 2vh);
     }
     &-accent {
       width: fit-content;
