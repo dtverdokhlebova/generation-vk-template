@@ -19,9 +19,9 @@ mixin form-thank(mods)
     .inner
       .form-thank__wrapper
         .form-thank__text
-          .form-thank__title Данные успешно отправлены! <br>Мы скоро свяжемся с&nbsp;вами.
-          +ui-button('', '--medium, --fz-xs, --al-left')(onclick=`window.openPopup('#popup-share')`)
+          .form-thank__title Если у есть вопросы для спикеров задайте их в нашем телеграм
+          +ui-button('', 'form-thank, --py-s, --medium, --fz-xs, --al-left')(onclick=`window.openPopup('#popup-share')`)
             +svg
-              include ../../images/icon_share.svg
-            | Поделиться вебинаром с&nbsp;коллегами
+              include ../../images/icon_telegram.svg
+            | Задать вопрос в&nbsp;телеграм
     block

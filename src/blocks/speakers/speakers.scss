@@ -40,6 +40,9 @@
     object-fit: cover;
     filter: grayscale(1);
     transition: $transitionDuration;
+    @include media-tablet {
+      filter: grayscale(0);
+    }
   }
   &__decor {
     position: absolute;
