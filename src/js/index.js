@@ -29,8 +29,6 @@ function banner() {
     getWidthTimeleft()
     bannerBgAnim()
   })
-
-  window.addEventListener('resize', getWidthTimeleft)
 }
 
 function bannerHeight() {

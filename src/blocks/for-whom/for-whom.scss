@@ -112,5 +112,8 @@
     @include media-tablet {
       width: min(114px, 26vw);
     }
+    img {
+      display: block;
+    }
   }
 }

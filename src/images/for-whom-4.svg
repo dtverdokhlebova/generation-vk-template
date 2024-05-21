@@ -4,7 +4,7 @@
 <rect x="126" y="40" width="59" height="59" transform="rotate(-14.7985 126 40)" fill="url(#pattern0_2002_8)"/>
 </mask>
 <g mask="url(#mask0_2002_8)">
-<rect x="119" y="42" width="82" height="80" transform="rotate(-14.7985 119 42)" fill="white"/>
+<rect x="125.793" y="40.2054" width="67.4506" height="59.5621" transform="rotate(-14.7985 125.793 40.2054)" fill="white"/>
 </g>
 <circle cx="52.5" cy="92.5" r="34.7569" stroke="#0077FF" stroke-width="1.48611"/>
 <mask id="mask1_2002_8" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="25" y="67" width="52" height="52">

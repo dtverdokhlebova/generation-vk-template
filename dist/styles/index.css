@@ -1074,6 +1074,9 @@ a {
     width: min(114px, 26vw);
   }
 }
+.for-whom__img img {
+  display: block;
+}
 .form-registry {
   position: relative;
   padding-bottom: 60px;
